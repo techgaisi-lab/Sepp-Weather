@@ -8,7 +8,11 @@ import com.techgaisi.seppweather.model.SeppLocation
  */
 @Immutable
 data class SeppWeatherConfig(
-    /** Wie viele Folgetage angezeigt werden (0–7) */
+    /** Wetter-Bildschirm nur im Querformat anzeigen (dreht das Tablet automatisch) */
+    val forceLandscape: Boolean = true,
+    /** Alles automatisch an die Bildschirmgröße anpassen, damit es ohne Scrollen passt */
+    val fitToScreen: Boolean = true,
+    /** Wie viele Folgetage angezeigt werden (0–4 empfohlen, Standard 3) */
     val forecastDays: Int = 3,
     /** „Früh / Mittag / Abend / Nacht“ anzeigen */
     val showDayParts: Boolean = true,

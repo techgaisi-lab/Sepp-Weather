@@ -3,7 +3,8 @@
 Große, klare Wetteranzeige für Android – gemacht für Pensionistinnen und Pensionisten.
 Geschrieben in **Kotlin + Jetpack Compose**, als eigenständiges Library-Modul, das sich in **jede Android-App** einbauen lässt.
 
-- **Groß & klar:** Temperatur in 112 sp, Texte ab 24 sp, Knöpfe mindestens 72 dp hoch
+- **Nur Querformat:** alles auf einen Blick, ohne Scrollen (dreht das Tablet automatisch quer)
+- **Sehr groß & klar:** Temperatur in 160 sp, Texte ab 30 sp, Knöpfe mindestens 80 dp hoch – wächst auf großen Tablets automatisch mit
 - **Ganze Sätze statt Fachbegriffe:** „Es regnet heute wahrscheinlich. Nehmen Sie einen Schirm mit.“
 - **Standort des Tablets** – freundliche Erklärung, Freigabe per großem Knopf, Weg zu den Einstellungen, wenn gesperrt
 - **Schnell:** zeigt sofort das zuletzt geladene Wetter, aktualisiert im Hintergrund; keine Bilddateien (Symbole werden gezeichnet), keine Netzwerk-Bibliothek
@@ -12,12 +13,10 @@ Geschrieben in **Kotlin + Jetpack Compose**, als eigenständiges Library-Modul, 
 - **Schriftart der App wird automatisch übernommen**
 - **Komplett anpassbar:** Farben, Schrift, Schriftgröße, Ecken, Abstände, angezeigte Bereiche
 - **Hell, Dunkel, Hoher Kontrast** – plus „Farben der App übernehmen“
-- **Tablet quer:** ab 720 dp Breite automatisch zweispaltig
 - Bedienhilfe (TalkBack) liest ganze Sätze vor
 
-| Hell | Dunkel | Hoher Kontrast |
-|---|---|---|
-| ![](docs/screenshots/02_hell_teilweise_bewoelkt.png) | ![](docs/screenshots/03_dunkel_regen.png) | ![](docs/screenshots/05_kontrast_schnee.png) |
+![Hell](docs/screenshots/02_hell_teilweise_bewoelkt.png)
+![Dunkel](docs/screenshots/03_dunkel_regen.png)
 
 Alle Varianten: [`docs/screenshots/`](docs/screenshots)
 
@@ -102,7 +101,7 @@ SeppWeatherCard(onClick = { /* großen Wetter-Bildschirm öffnen */ })
 SeppWeather(style = SeppWeatherDefaults.style())         // folgt Hell/Dunkel des Geräts (Standard)
 SeppWeather(style = SeppWeatherDefaults.light())
 SeppWeather(style = SeppWeatherDefaults.dark())
-SeppWeather(style = SeppWeatherDefaults.highContrast())  // schwarz/weiß/gelb, etwas größere Schrift
+SeppWeather(style = SeppWeatherDefaults.highContrast())  // schwarz/weiß/gelb, dicke Rahmen
 SeppWeather(style = SeppWeatherDefaults.fromAppTheme())  // Farben aus dem MaterialTheme der App
 ```
 
@@ -150,7 +149,9 @@ Die App kann jeden Text überschreiben, indem sie einen String mit demselben Nam
 ```kotlin
 SeppWeather(
     config = SeppWeatherConfig(
-        forecastDays = 3,                     // 0–7 Folgetage
+        forceLandscape = true,                // Wetter-Bildschirm immer quer
+        fitToScreen = true,                   // Größe automatisch an den Bildschirm anpassen
+        forecastDays = 3,                     // Folgetage (3 passt am besten)
         showDayParts = true,                  // Früh / Mittag / Abend / Nacht
         showAdvice = true,                    // Ratschläge in Sätzen
         showRefreshButton = true,

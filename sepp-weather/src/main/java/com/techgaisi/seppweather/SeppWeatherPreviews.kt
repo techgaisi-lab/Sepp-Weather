@@ -10,13 +10,13 @@ import com.techgaisi.seppweather.ui.SeppWeatherContent
 
 // Vorschauen: In Android Studio diese Datei öffnen → „Split“ oder „Design“.
 
-@Preview(name = "Hell – Tablet hoch", widthDp = 600, heightDp = 1000)
+@Preview(name = "Hell", widthDp = 1280, heightDp = 800)
 @Composable
 private fun PreviewLight() {
     SeppWeatherContent(SeppWeatherSamples.sample(), style = SeppWeatherDefaults.light(), onRefresh = {})
 }
 
-@Preview(name = "Dunkel – Regen", widthDp = 600, heightDp = 1000)
+@Preview(name = "Dunkel – Regen", widthDp = 1280, heightDp = 800)
 @Composable
 private fun PreviewDark() {
     SeppWeatherContent(
@@ -26,7 +26,7 @@ private fun PreviewDark() {
     )
 }
 
-@Preview(name = "Hoher Kontrast – Schnee", widthDp = 600, heightDp = 1000)
+@Preview(name = "Hoher Kontrast – Schnee", widthDp = 1280, heightDp = 800)
 @Composable
 private fun PreviewContrast() {
     SeppWeatherContent(
@@ -36,13 +36,13 @@ private fun PreviewContrast() {
     )
 }
 
-@Preview(name = "Tablet quer", widthDp = 1280, heightDp = 800)
+@Preview(name = "Kleines Tablet quer", widthDp = 960, heightDp = 600)
 @Composable
-private fun PreviewLandscape() {
+private fun PreviewSmall() {
     SeppWeatherContent(SeppWeatherSamples.sample(WeatherKind.CLEAR, 22.0), style = SeppWeatherDefaults.light(), onRefresh = {})
 }
 
-@Preview(name = "Kleine Karte", widthDp = 600)
+@Preview(name = "Kleine Karte", widthDp = 800)
 @Composable
 private fun PreviewCard() {
     SeppWeatherCardContent(SeppWeatherSamples.sample(), Modifier.padding(16.dp), SeppWeatherDefaults.light())

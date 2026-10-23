@@ -59,25 +59,25 @@ internal fun MessageScreen(
         ) {
             SeppCard(
                 style = style,
-                modifier = Modifier.widthIn(max = 640.dp),
+                modifier = Modifier.widthIn(max = 920.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(20.dp),
+                    verticalArrangement = Arrangement.spacedBy(28.dp),
                 ) {
                     if (showProgress) {
                         CircularProgressIndicator(
-                            modifier = Modifier.size(84.dp),
+                            modifier = Modifier.size(110.dp),
                             color = style.colors.accent,
-                            strokeWidth = 7.dp,
+                            strokeWidth = 9.dp,
                         )
                     } else if (icon != null) {
                         Icon(
                             imageVector = icon,
                             contentDescription = null,
                             tint = style.colors.accent,
-                            modifier = Modifier.size(96.dp * style.textScale),
+                            modifier = Modifier.size(130.dp * style.textScale),
                         )
                     }
                     Text(

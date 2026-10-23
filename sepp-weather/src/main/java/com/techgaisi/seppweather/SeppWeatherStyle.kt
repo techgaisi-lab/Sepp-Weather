@@ -136,7 +136,7 @@ object SeppWeatherDefaults {
     fun dark(fontFamily: FontFamily? = null, textScale: Float = 1f) =
         SeppWeatherStyle(colors = DarkColors, fontFamily = fontFamily, textScale = textScale, borderWidth = 1.dp)
 
-    fun highContrast(fontFamily: FontFamily? = null, textScale: Float = 1.1f) =
+    fun highContrast(fontFamily: FontFamily? = null, textScale: Float = 1f) =
         SeppWeatherStyle(colors = HighContrastColors, fontFamily = fontFamily, textScale = textScale, borderWidth = 3.dp)
 
     /** Standard: folgt automatisch dem Hell-/Dunkelmodus des Geräts. */

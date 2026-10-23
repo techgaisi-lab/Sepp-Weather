@@ -45,14 +45,14 @@ internal fun rememberSeppTypography(style: SeppWeatherStyle): SeppTypography {
             )
         }
         SeppTypography(
-            hero = ts(112, FontWeight.Bold, 1.0f),
-            cardTemperature = ts(72, FontWeight.Bold, 1.0f),
-            title = ts(34, FontWeight.SemiBold, 1.2f),
-            body = ts(26, FontWeight.Normal, 1.35f),
-            bodyStrong = ts(28, FontWeight.SemiBold, 1.3f),
-            label = ts(24, FontWeight.Medium, 1.25f),
-            tileTemperature = ts(36, FontWeight.Bold, 1.1f),
-            button = ts(28, FontWeight.SemiBold, 1.2f),
+            hero = ts(160, FontWeight.Bold, 1.0f),
+            cardTemperature = ts(110, FontWeight.Bold, 1.0f),
+            title = ts(46, FontWeight.SemiBold, 1.15f),
+            body = ts(32, FontWeight.Normal, 1.3f),
+            bodyStrong = ts(36, FontWeight.SemiBold, 1.25f),
+            label = ts(30, FontWeight.Medium, 1.2f),
+            tileTemperature = ts(48, FontWeight.Bold, 1.1f),
+            button = ts(34, FontWeight.SemiBold, 1.2f),
         )
     }
 }

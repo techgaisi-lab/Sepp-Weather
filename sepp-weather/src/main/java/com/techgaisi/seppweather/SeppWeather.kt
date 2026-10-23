@@ -1,5 +1,6 @@
 package com.techgaisi.seppweather
 
+import android.content.pm.ActivityInfo
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,9 +15,11 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -55,6 +58,7 @@ fun SeppWeather(
 ) {
     val requestPermission = rememberLocationPermissionRequest(state, config)
     WeatherLifecycle(state, config, requestPermission)
+    if (config.forceLandscape) LockLandscape()
 
     when (val ui = state.uiState) {
         SeppWeatherUiState.Loading -> LoadingScreen(style, modifier)
@@ -108,9 +112,9 @@ fun SeppWeatherCard(
         SeppWeatherUiState.Loading -> SeppCard(style, modifier) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 CircularProgressIndicator(
-                    modifier = Modifier.size(48.dp),
+                    modifier = Modifier.size(64.dp),
                     color = style.colors.accent,
-                    strokeWidth = 5.dp,
+                    strokeWidth = 6.dp,
                 )
                 Spacer(Modifier.width(20.dp))
                 Text(stringResource(R.string.sepp_weather_loading), style = t.body, color = style.colors.text)
@@ -185,7 +189,7 @@ fun SeppWeatherCardContent(
             .semantics(mergeDescendants = true) { contentDescription = "$place. $spoken" },
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            WeatherIcon(cur.kind, cur.isDay, 116.dp * style.textScale, style.colors)
+            WeatherIcon(cur.kind, cur.isDay, 160.dp * style.textScale, style.colors)
             Spacer(Modifier.width(20.dp))
             Column(Modifier.weight(1f)) {
                 Text(
@@ -216,6 +220,22 @@ fun SeppWeatherCardContent(
         if (advice != null) {
             Spacer(Modifier.size(12.dp))
             Text(stringResource(advice), style = t.body, color = style.colors.text)
+        }
+    }
+}
+
+/**
+ * Dreht die Activity ins Querformat, solange der Wetter-Bildschirm sichtbar ist,
+ * und stellt danach die vorherige Einstellung wieder her.
+ */
+@Composable
+private fun LockLandscape() {
+    val activity = LocalContext.current.findActivity() ?: return
+    DisposableEffect(activity) {
+        val previous = activity.requestedOrientation
+        activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+        onDispose {
+            if (!activity.isChangingConfigurations) activity.requestedOrientation = previous
         }
     }
 }

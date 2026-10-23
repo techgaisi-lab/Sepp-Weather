@@ -83,7 +83,7 @@ private fun Demo() {
 
 /** Beispiel: Farben, Schrift und Größe an die eigene App anpassen. */
 @Composable
-private fun customStyle() = SeppWeatherDefaults.light(fontFamily = FontFamily.Serif, textScale = 1.1f).let {
+private fun customStyle() = SeppWeatherDefaults.light(fontFamily = FontFamily.Serif).let {
     it.copy(
         cornerRadius = 12.dp,
         colors = it.colors.copy(
