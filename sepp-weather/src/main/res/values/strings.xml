@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Alle Texte von Sepp-Weather.
+    Jede App kann einzelne Texte überschreiben, indem sie einen String mit
+    gleichem Namen in ihrer eigenen res/values/strings.xml anlegt.
+-->
+<resources>
+    <!-- Wetterlagen -->
+    <string name="sepp_weather_clear_day">Sonnig</string>
+    <string name="sepp_weather_clear_night">Klarer Himmel</string>
+    <string name="sepp_weather_partly_cloudy">Teilweise bewölkt</string>
+    <string name="sepp_weather_cloudy">Bewölkt</string>
+    <string name="sepp_weather_fog">Nebel</string>
+    <string name="sepp_weather_drizzle">Leichter Regen</string>
+    <string name="sepp_weather_rain">Regen</string>
+    <string name="sepp_weather_freezing_rain">Eisregen</string>
+    <string name="sepp_weather_snow">Schnee</string>
+    <string name="sepp_weather_showers">Regenschauer</string>
+    <string name="sepp_weather_thunderstorm">Gewitter</string>
+
+    <!-- Wind in Worten -->
+    <string name="sepp_weather_wind_calm">Kaum Wind</string>
+    <string name="sepp_weather_wind_light">Leichter Wind</string>
+    <string name="sepp_weather_wind_strong">Starker Wind</string>
+    <string name="sepp_weather_wind_storm">Sturm</string>
+
+    <!-- Temperaturen -->
+    <string name="sepp_weather_degrees_short">%1$d°</string>
+    <string name="sepp_weather_feels_like">Gefühlt wie %1$d Grad</string>
+    <string name="sepp_weather_today_range">Heute wird es zwischen %1$d und %2$d Grad.</string>
+    <string name="sepp_weather_now_spoken">Jetzt %1$d Grad, %2$s.</string>
+
+    <!-- Ratschläge in klaren Sätzen -->
+    <string name="sepp_weather_advice_dry">Heute bleibt es trocken.</string>
+    <string name="sepp_weather_advice_rain">Es regnet heute wahrscheinlich. Nehmen Sie einen Schirm mit.</string>
+    <string name="sepp_weather_advice_snow">Heute schneit es. Gehen Sie vorsichtig.</string>
+    <string name="sepp_weather_advice_ice">Vorsicht: Es kann glatt sein.</string>
+    <string name="sepp_weather_advice_storm">Achtung, Gewitter! Bleiben Sie besser im Haus.</string>
+    <string name="sepp_weather_advice_fog">Es ist neblig. Man sieht schlecht.</string>
+    <string name="sepp_weather_advice_cold">Es ist kalt. Ziehen Sie eine warme Jacke an.</string>
+    <string name="sepp_weather_advice_cool">Eine Jacke ist heute gut.</string>
+    <string name="sepp_weather_advice_hot">Es wird heiß. Trinken Sie genug Wasser.</string>
+    <string name="sepp_weather_advice_wind">Es ist windig. Halten Sie Ihren Hut fest.</string>
+    <string name="sepp_weather_advice_nice">Ein schöner Tag für einen Spaziergang.</string>
+
+    <!-- Abschnitte -->
+    <string name="sepp_weather_section_today">Heute</string>
+    <string name="sepp_weather_section_day">Im Lauf des Tages</string>
+    <string name="sepp_weather_section_days">Die nächsten Tage</string>
+    <string name="sepp_weather_part_morning">Früh</string>
+    <string name="sepp_weather_part_noon">Mittag</string>
+    <string name="sepp_weather_part_evening">Abend</string>
+    <string name="sepp_weather_part_night">Nacht</string>
+    <string name="sepp_weather_tomorrow">Morgen</string>
+    <string name="sepp_weather_rain_chance">Regen: %1$d %%</string>
+    <string name="sepp_weather_snow_chance">Schnee: %1$d %%</string>
+    <string name="sepp_weather_date_pattern">EEEE, d. MMMM</string>
+
+    <!-- Fußzeile -->
+    <string name="sepp_weather_updated_at">Stand: %1$s Uhr</string>
+    <string name="sepp_weather_refresh">Aktualisieren</string>
+    <string name="sepp_weather_offline_hint">Keine Verbindung. Sie sehen das Wetter von %1$s Uhr.</string>
+
+    <!-- Zustände -->
+    <string name="sepp_weather_loading">Das Wetter wird geladen …</string>
+    <string name="sepp_weather_unknown_place">Ihr Ort</string>
+    <string name="sepp_weather_permission_title">Wo sind Sie gerade?</string>
+    <string name="sepp_weather_permission_text">Damit Sie das Wetter für Ihren Ort sehen, braucht die App Ihren Standort.</string>
+    <string name="sepp_weather_permission_button">Standort freigeben</string>
+    <string name="sepp_weather_permission_blocked_text">Der Standort ist gesperrt. Bitte erlauben Sie ihn in den Einstellungen.</string>
+    <string name="sepp_weather_permission_settings_button">Einstellungen öffnen</string>
+    <string name="sepp_weather_error_internet_title">Keine Verbindung</string>
+    <string name="sepp_weather_error_internet_text">Das Wetter kann gerade nicht geladen werden. Bitte prüfen Sie das Internet.</string>
+    <string name="sepp_weather_error_location_title">Ort nicht gefunden</string>
+    <string name="sepp_weather_error_location_text">Bitte schalten Sie den Standort am Tablet ein.</string>
+    <string name="sepp_weather_retry">Nochmal versuchen</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Attribute für SeppWeatherView (Einsatz in XML-Layouts) -->
+    <declare-styleable name="SeppWeatherView">
+        <!-- Aussehen: auto folgt dem Hell-/Dunkelmodus des Geräts -->
+        <attr name="seppVariant" format="enum">
+            <enum name="auto" value="0" />
+            <enum name="light" value="1" />
+            <enum name="dark" value="2" />
+            <enum name="highContrast" value="3" />
+        </attr>
+        <!-- true = kleine Karte statt ganzer Bildschirm -->
+        <attr name="seppCompact" format="boolean" />
+        <!-- Eigene Schriftart, z. B. @font/meine_schrift. Ohne Angabe wird die Schrift des App-Themes genommen. -->
+        <attr name="seppFontFamily" format="reference" />
+        <!-- Textgröße als Faktor, z. B. 1.2 für 20 % größer -->
+        <attr name="seppTextScale" format="float" />
+        <!-- Hauptfarbe für Knöpfe und Hervorhebungen -->
+        <attr name="seppAccentColor" format="color" />
+    </declare-styleable>
+</resources>
